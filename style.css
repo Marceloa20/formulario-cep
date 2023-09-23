@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+:root{
+    --fonte-titulo: 'Merriweather', serif;
+    --fonte-corpo: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background-color: #DEDEDE;
+    font-family: var(--fonte-corpo);
+    width: 100%;
+    height: 100vh;
+}
+
+.container-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.imagem-principal{
+    width: 544px;
+}
+
+.container-formulario{
+    background-color: #ffffff;
+    padding: 20px;
+    margin-left: 80px;
+    width: 544px;
+    height: 600px;
+    border: 0.3px solid #64646442;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 1px 1px 5px #64646442;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form h1{
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.linha-horizontal{
+    border: 0.1em solid #4949492a;
+    margin-bottom: 20px;
+}
+
+form label{
+    font-size: 1em;   
+}
+
+form input{
+    margin-bottom: 10px;
+    padding: 0.8em 0.5em;
+    border: 0.3px solid #64646442;
+    border-radius: 5px;
+}
+
+form button{
+    background-color: #0D6EFD;
+    color: #ffffff;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-family: var(--fonte-titulo);
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover{
+    background-color: var(--roxo);
+    color: #00000094;
+}
+
