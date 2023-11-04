@@ -17,7 +17,7 @@
                     <h1>preencha seu endereço</h1>
                     <div class="linha-horizontal"></div>
                     <label for="cep">CEP</label>
-                    <input type="text" name="cep" id="cep" placeholder="Ex: 12345678" required>
+                    <input onblur="buscarCEP()" type="text" name="cep" id="cep" placeholder="Ex: 12345678" required>
                     <label for="logradouro">Logradouro</label>
                     <input type="text" name="logradouro" id="logradouro" placeholder="Rua X, Travessa Y, Av Z" required>
                     <label for="numero">Número</label>
@@ -32,5 +32,25 @@
                 </form>
         </section>
     </main>
+
+    <script>
+        function buscarCEP() {
+            logradouro.value = "";
+            bairro.value = "";
+            cidade.value = "";
+            uf.value = "";
+
+            fetch(`https://viacep.com.br/ws/${cep.value}/json`)
+                .then(function (resposta) {
+                    return resposta.json();
+                })
+                .then(function (conteudo) {
+                    logradouro.value = conteudo.logradouro;
+                    bairro.value = conteudo.bairro;
+                    cidade.value = conteudo.localidade;
+                    uf.value = conteudo.uf;
+                });
+        }
+    </script>
 </body>
 </html>
